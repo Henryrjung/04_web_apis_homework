@@ -39,14 +39,18 @@ var questions = [
         correct: ""
     },
 ];
+//variables to create building blocks of question
+var questionContent = document.createElement("h2");
+questionContent.textContent = "";
 //function to start the game 
 function startQuiz() {
     quizTime();
-    removeDiv();
+    
+    showQuestion();
+    console.log(showQuestion)
 }
 //event listener to start quiz, timer, and remove start btn
 startButton.addEventListener("click", startQuiz);
-
 //function to clear div
 function removeDiv() {
     document.getElementById("quizDiv").remove();
@@ -59,6 +63,4 @@ function quizTime() {
     }, 1000)
 }
 //function to load questions
-function loadQuestion() {
-  
-}
+
